@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import sys
 
+# 爬取小说
 
 class downloader(object):
 
@@ -24,7 +25,7 @@ class downloader(object):
             self.names.append(each.string)
             self.urls.append(self.server + each.get('href'))
 
-    def get_content(self,target):
+    def get_content(self, target):
         req = requests.get(url=target)
         html = req.text
         bf = BeautifulSoup(html)
