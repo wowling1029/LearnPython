@@ -1,9 +1,11 @@
 #!/usr/bin/python3
  
 import pymysql
+
+password = '123456'
  
 # 打开数据库连接
-db = pymysql.connect("localhost","root","110120","mysql" )
+db = pymysql.connect("localhost","root",password,"mysql" )
  
 # 使用 cursor() 方法创建一个游标对象 cursor
 cursor = db.cursor()
